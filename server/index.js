@@ -1,5 +1,4 @@
 const express = require('express');
-const fs = require('fs');
 const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 8000;
@@ -13,9 +12,7 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 app.get('/cars', (req, res) => {
-    const data = require('../data/cars.json');
-
-    res.render('cariMobil', { data: data });
+    res.render('cariMobil');
 });
 
 app.listen(PORT, () => {
