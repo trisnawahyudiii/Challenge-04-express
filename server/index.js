@@ -14,6 +14,9 @@ app.get('/', (req, res) => {
 app.get('/cars', (req, res) => {
     res.render('cariMobil');
 });
+app.use('/', (req, res) => {
+    res.render('404');
+});
 
 app.listen(PORT, () => {
     console.log(`App Running at http://localhost:${PORT}`);
